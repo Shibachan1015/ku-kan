@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>空環：Akasha 才能カード</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f3ea;
+            color: #222;
+        }
+
+        header {
+            padding: 1rem;
+            text-align: center;
+            background: radial-gradient(circle at top, #fffef6, #e9e2c7);
+            border-bottom: 1px solid #d2c9a5;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.3rem;
+            letter-spacing: 0.08em;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 0.3rem;
+        }
+
+        .link {
+            margin-top: 0.3rem;
+            font-size: 0.8rem;
+        }
+
+        .link a {
+            color: #7b5a25;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 0.7rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .sheet-info {
+            font-size: 0.8rem;
+            margin-bottom: 0.6rem;
+            color: #555;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 0.5rem;
+            page-break-inside: avoid;
+        }
+
+        .card {
+            background: #fffdf7;
+            border: 1px solid #d2c9a5;
+            border-radius: 8px;
+            padding: 0.4rem 0.55rem;
+            box-sizing: border-box;
+            height: 90px;
+            /* おおよそ名刺サイズ */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .icon {
+            font-size: 1.1rem;
+        }
+
+        .title {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .desc {
+            font-size: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .note {
+            font-size: 0.7rem;
+            color: #666;
+            margin-top: 0.2rem;
+        }
+
+        @media print {
+
+            header,
+            .sheet-info {
+                display: none;
+            }
+
+            body {
+                background: #ffffff;
+            }
+
+            main {
+                padding: 0.3rem;
+            }
+
+            .card {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>空環：Akasha 才能カード</h1>
+        <div class="subtitle">いろんな才能を持ち寄って、豊かさを分かち合うためのカード</div>
+        <div class="link"><a href="index.html">← トップページへ戻る（ある場合）</a></div>
+    </header>
+
+    <main>
+        <div class="sheet-info">
+            ・A4に印刷して線に沿ってカットして使ってください。<br />
+            ・アクションカードに重ねて置くと、効果にボーナスが乗ります（ルールは別紙）。
+        </div>
+
+        <div class="cards-grid">
+            <!-- 1 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">👐</div>
+                        <div class="title">手しごとの才能</div>
+                    </div>
+                    <div class="desc">
+                        手を動かして形にするのが得意（職人・クラフト・料理など）。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：制作・修理・ものづくり</div>
+            </div>
+
+            <!-- 2 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">💡</div>
+                        <div class="title">企画の才能</div>
+                    </div>
+                    <div class="desc">
+                        おもしろい企画や段取りを考えるのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：イベント・新しい試み</div>
+            </div>
+
+            <!-- 3 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">👂</div>
+                        <div class="title">聴く才能</div>
+                    </div>
+                    <div class="desc">
+                        人の話をじっくり聴き、気持ちを受け止めるのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：相談・対話・ケア</div>
+            </div>
+
+            <!-- 4 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🧮</div>
+                        <div class="title">仕組み化の才能</div>
+                    </div>
+                    <div class="desc">
+                        ルールや流れを整えて、回る仕組みにするのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：運営・システムづくり</div>
+            </div>
+
+            <!-- 5 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🌱</div>
+                        <div class="title">育てる才能</div>
+                    </div>
+                    <div class="desc">
+                        植物や生き物、人の成長をコツコツ育てるのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：植林・農・教育</div>
+            </div>
+
+            <!-- 6 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🎨</div>
+                        <div class="title">表現の才能</div>
+                    </div>
+                    <div class="desc">
+                        絵・デザイン・写真などで世界を見せるのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：広報・展示・デザイン</div>
+            </div>
+
+            <!-- 7 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">📚</div>
+                        <div class="title">教える才能</div>
+                    </div>
+                    <div class="desc">
+                        人にわかりやすく説明したり、一緒に練習したりするのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：講座・ワークショップ</div>
+            </div>
+
+            <!-- 8 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🕸</div>
+                        <div class="title">つなぐ才能</div>
+                    </div>
+                    <div class="desc">
+                        人と人、団体と団体を紹介してつなぐのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：マッチング・紹介</div>
+            </div>
+
+            <!-- 9 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🔧</div>
+                        <div class="title">直す才能</div>
+                    </div>
+                    <div class="desc">
+                        壊れたものを修理し、まだまだ使えるようにするのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：修理・再生</div>
+            </div>
+
+            <!-- 10 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">📣</div>
+                        <div class="title">伝える才能</div>
+                    </div>
+                    <div class="desc">
+                        SNSや文章や話し言葉で、魅力を人に伝えるのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：発信・告知</div>
+            </div>
+
+            <!-- 11 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">📊</div>
+                        <div class="title">見える化の才能</div>
+                    </div>
+                    <div class="desc">
+                        数字や図で状況をスッキリ整理するのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：分析・計画</div>
+            </div>
+
+            <!-- 12 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🏡</div>
+                        <div class="title">場づくりの才能</div>
+                    </div>
+                    <div class="desc">
+                        安心して集まれる“場”の空気をつくるのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：会合・イベント運営</div>
+            </div>
+
+            <!-- 13 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🧵</div>
+                        <div class="title">細やかさの才能</div>
+                    </div>
+                    <div class="desc">
+                        細部に気を配り、仕上がりを丁寧に整えるのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：制作の仕上げ・品質管理</div>
+            </div>
+
+            <!-- 14 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🔥</div>
+                        <div class="title">推進の才能</div>
+                    </div>
+                    <div class="desc">
+                        物事をグイグイ前に進め、行動を起こすのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：立ち上げ・実行役</div>
+            </div>
+
+            <!-- 15 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🌈</div>
+                        <div class="title">調停の才能</div>
+                    </div>
+                    <div class="desc">
+                        意見の違いをまとめたり、ケンカをおさめるのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：会議・対立の場</div>
+            </div>
+
+            <!-- 16 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🧭</div>
+                        <div class="title">ビジョンの才能</div>
+                    </div>
+                    <div class="desc">
+                        少し先の未来像を描いて、みんなに示すのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：長期計画・方針づくり</div>
+            </div>
+
+            <!-- 17 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">📦</div>
+                        <div class="title">物流の才能</div>
+                    </div>
+                    <div class="desc">
+                        モノの出入りや在庫を上手に回すのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：物資配分・在庫管理</div>
+            </div>
+
+            <!-- 18 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🧑‍🍳</div>
+                        <div class="title">もてなしの才能</div>
+                    </div>
+                    <div class="desc">
+                        ごはん・お茶・接客などで人をもてなすのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：集まり・交流会</div>
+            </div>
+
+            <!-- 19 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🛡</div>
+                        <div class="title">守りの才能</div>
+                    </div>
+                    <div class="desc">
+                        安全・ルール・リスク管理を考えるのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：防災・契約・見守り</div>
+            </div>
+
+            <!-- 20 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon">🧠</div>
+                        <div class="title">学びの才能</div>
+                    </div>
+                    <div class="desc">
+                        新しい知識や技術をどんどん吸収して試すのが得意。
+                    </div>
+                </div>
+                <div class="note">相性の良い行動：試作・研究・研修</div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

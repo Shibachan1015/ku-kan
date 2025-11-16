@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>空環：Akasha 簡易盤面アプリ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f3ea;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 1.2rem 1rem 0.7rem;
+            text-align: center;
+            background: radial-gradient(circle at top, #fffef6, #e9e2c7);
+            border-bottom: 1px solid #d2c9a5;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.4rem;
+            letter-spacing: 0.08em;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 0.3rem;
+        }
+
+        .top-link {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .top-link a {
+            color: #7b5a25;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 540px;
+            margin: 0 auto;
+            padding: 1rem 0.9rem 1.5rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 0.9rem 1rem;
+            margin-bottom: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e0d6b6;
+        }
+
+        .card h2 {
+            font-size: 1rem;
+            margin: 0 0 0.4rem;
+            border-left: 4px solid #9b7a39;
+            padding-left: 0.4rem;
+        }
+
+        .year-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .year-label {
+            font-size: 0.9rem;
+        }
+
+        .year-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        button {
+            appearance: none;
+            border: none;
+            border-radius: 999px;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-main {
+            background: #9b7a39;
+            color: #fff;
+        }
+
+        .btn-sub {
+            background: #fff;
+            color: #555;
+            border: 1px solid #d2c9a5;
+        }
+
+        .track {
+            margin-top: 0.5rem;
+            padding-top: 0.4rem;
+            border-top: 1px dashed #e0d6b6;
+        }
+
+        .track-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+
+        .track-name {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .track-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .track-buttons {
+            display: flex;
+            gap: 0.4rem;
+            margin-top: 0.3rem;
+        }
+
+        .btn-circle {
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .btn-minus {
+            background: #fff;
+            color: #555;
+            border: 1px solid #d2c9a5;
+        }
+
+        .btn-plus {
+            background: #9b7a39;
+            color: #fff;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 0.05rem 0.45rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+        }
+
+        .pill-forest {
+            background: #d8f3dc;
+            color: #064420;
+        }
+
+        .pill-culture {
+            background: #ffe5e0;
+            color: #7b241c;
+        }
+
+        .pill-social {
+            background: #dde9ff;
+            color: #1f3c88;
+        }
+
+        .pill-akasha {
+            background: #fff3bf;
+            color: #8d5a00;
+        }
+
+        .pill-life {
+            background: #e6f0ff;
+            color: #123e66;
+        }
+
+        .life-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        .note {
+            font-size: 0.78rem;
+            color: #666;
+            margin-top: 0.4rem;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 80px;
+            border-radius: 8px;
+            border: 1px solid #d2c9a5;
+            padding: 0.4rem 0.5rem;
+            font-family: inherit;
+            font-size: 0.8rem;
+            background: #fffcf4;
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>空環：Akasha</h1>
+        <div class="subtitle">簡易盤面アプリ（F / K / S / P / L 管理）</div>
+        <div class="top-link"><a href="index.html">← トップページへ戻る</a></div>
+    </header>
+
+    <main>
+        <!-- 年数とリセット -->
+        <section class="card">
+            <h2>年（ターン）管理</h2>
+            <div class="year-row">
+                <div>
+                    <div class="year-label">現在の年数（1〜20年）</div>
+                    <div id="yearValue" class="year-value">1 年目</div>
+                </div>
+                <div class="btn-row">
+                    <button class="btn-sub" id="prevYear">− 年を戻す</button>
+                    <button class="btn-main" id="nextYear">＋ 年を進める</button>
+                </div>
+            </div>
+            <div class="btn-row" style="margin-top:0.7rem;">
+                <button class="btn-sub" id="resetGame">🔄 全てリセット</button>
+            </div>
+            <p class="note">※ カードやイベントは紙で管理し、この画面は数値だけを管理します。</p>
+        </section>
+
+        <!-- パラメータ管理 -->
+        <section class="card">
+            <h2>パラメータ管理</h2>
+
+            <!-- 森 F -->
+            <div class="track" data-key="F">
+                <div class="track-header">
+                    <div class="track-name">
+                        🌳 森（F）
+                        <span class="pill pill-forest">0〜20</span>
+                    </div>
+                    <div class="track-value" id="val-F">8</div>
+                </div>
+                <div class="track-buttons">
+                    <button class="btn-circle btn-minus" data-op="-" data-key="F">−</button>
+                    <button class="btn-circle btn-plus" data-op="+" data-key="F">＋</button>
+                </div>
+            </div>
+
+            <!-- 文化 K -->
+            <div class="track" data-key="K">
+                <div class="track-header">
+                    <div class="track-name">
+                        🎎 文化（K）
+                        <span class="pill pill-culture">0〜20</span>
+                    </div>
+                    <div class="track-value" id="val-K">8</div>
+                </div>
+                <div class="track-buttons">
+                    <button class="btn-circle btn-minus" data-op="-" data-key="K">−</button>
+                    <button class="btn-circle btn-plus" data-op="+" data-key="K">＋</button>
+                </div>
+            </div>
+
+            <!-- コミュ S -->
+            <div class="track" data-key="S">
+                <div class="track-header">
+                    <div class="track-name">
+                        🤝 コミュニティ（S）
+                        <span class="pill pill-social">0〜20</span>
+                    </div>
+                    <div class="track-value" id="val-S">10</div>
+                </div>
+                <div class="track-buttons">
+                    <button class="btn-circle btn-minus" data-op="-" data-key="S">−</button>
+                    <button class="btn-circle btn-plus" data-op="+" data-key="S">＋</button>
+                </div>
+            </div>
+
+            <!-- 空環 P -->
+            <div class="track" data-key="P">
+                <div class="track-header">
+                    <div class="track-name">
+                        💫 空環ポイント（P）
+                        <span class="pill pill-akasha">0〜20</span>
+                    </div>
+                    <div class="track-value" id="val-P">3</div>
+                </div>
+                <div class="track-buttons">
+                    <button class="btn-circle btn-minus" data-op="-" data-key="P">−</button>
+                    <button class="btn-circle btn-plus" data-op="+" data-key="P">＋</button>
+                </div>
+            </div>
+
+            <!-- 生命指数 L -->
+            <div class="track">
+                <div class="track-header">
+                    <div class="track-name">
+                        🌏 生命指数（L）
+                        <span class="pill pill-life">0〜60</span>
+                    </div>
+                    <div class="track-value" id="val-L">26</div>
+                </div>
+                <div class="life-badge">
+                    <span>計算式：L = F + K + S</span>
+                </div>
+                <p class="note">
+                    20年終了時：L が 40 以上なら「神々の祝福」エンディング。<br>
+                    30〜39：浄化の兆し / 20〜29：揺らぎの未来 / 19以下：神々の嘆き。
+                </p>
+            </div>
+        </section>
+
+        <!-- メモ欄 -->
+        <section class="card">
+            <h2>メモ・イベント記録</h2>
+            <textarea id="memo" placeholder="この年に起きたイベントや使ったカードなどをメモできます（再読み込みで消えます）。"></textarea>
+        </section>
+    </main>
+
+    <script>
+        (function () {
+            const state = {
+                year: 1,
+                F: 8,
+                K: 8,
+                S: 10,
+                P: 3
+            };
+            const minVal = 0;
+            const maxVal = 20;
+
+            const yearEl = document.getElementById('yearValue');
+            const valF = document.getElementById('val-F');
+            const valK = document.getElementById('val-K');
+            const valS = document.getElementById('val-S');
+            const valP = document.getElementById('val-P');
+            const valL = document.getElementById('val-L');
+
+            function updateDisplay() {
+                yearEl.textContent = state.year + ' 年目';
+                valF.textContent = state.F;
+                valK.textContent = state.K;
+                valS.textContent = state.S;
+                valP.textContent = state.P;
+                valL.textContent = state.F + state.K + state.S;
+            }
+
+            function clamp(v) {
+                return Math.max(minVal, Math.min(maxVal, v));
+            }
+
+            document.getElementById('nextYear').addEventListener('click', function () {
+                if (state.year < 20) {
+                    state.year += 1;
+                    updateDisplay();
+                }
+            });
+
+            document.getElementById('prevYear').addEventListener('click', function () {
+                if (state.year > 1) {
+                    state.year -= 1;
+                    updateDisplay();
+                }
+            });
+
+            document.getElementById('resetGame').addEventListener('click', function () {
+                if (!confirm('全ての値を初期状態に戻しますか？')) return;
+                state.year = 1;
+                state.F = 8;
+                state.K = 8;
+                state.S = 10;
+                state.P = 3;
+                document.getElementById('memo').value = '';
+                updateDisplay();
+            });
+
+            document.querySelectorAll('.btn-circle').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    const key = btn.getAttribute('data-key');
+                    const op = btn.getAttribute('data-op');
+                    let v = state[key];
+                    if (op === '+') v += 1;
+                    if (op === '-') v -= 1;
+                    state[key] = clamp(v);
+                    updateDisplay();
+                });
+            });
+
+            updateDisplay();
+        })();
+    </script>
+</body>
+
+</html>

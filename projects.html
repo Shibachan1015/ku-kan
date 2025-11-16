@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>空環：Akasha 共創プロジェクトカード</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f3ea;
+            color: #222;
+        }
+
+        header {
+            padding: 1rem;
+            text-align: center;
+            background: radial-gradient(circle at top, #fffef6, #e9e2c7);
+            border-bottom: 1px solid #d2c9a5;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.3rem;
+            letter-spacing: 0.08em;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 0.3rem;
+        }
+
+        .link {
+            margin-top: 0.3rem;
+            font-size: 0.8rem;
+        }
+
+        .link a {
+            color: #7b5a25;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 0.7rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .sheet-info {
+            font-size: 0.8rem;
+            margin-bottom: 0.6rem;
+            color: #555;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 0.7rem;
+            page-break-inside: avoid;
+        }
+
+        .card {
+            background: #fffdf7;
+            border: 1px solid #d2c9a5;
+            border-radius: 10px;
+            padding: 0.6rem 0.7rem;
+            box-sizing: border-box;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .card-icon {
+            font-size: 1.1rem;
+        }
+
+        .card-desc {
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.3rem;
+            margin-bottom: 0.1rem;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1.1rem;
+            font-size: 0.75rem;
+        }
+
+        li {
+            margin-bottom: 0.15rem;
+        }
+
+        .effect {
+            font-size: 0.75rem;
+            margin-top: 0.2rem;
+        }
+
+        .note {
+            font-size: 0.7rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 0.05rem 0.35rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            border: 1px solid #d2c9a5;
+            background: #fff;
+            margin-right: 0.2rem;
+            margin-bottom: 0.1rem;
+        }
+
+        @media print {
+
+            header,
+            .sheet-info {
+                display: none;
+            }
+
+            body {
+                background: #ffffff;
+            }
+
+            main {
+                padding: 0.3rem;
+            }
+
+            .card {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>空環：Akasha 共創プロジェクトカード</h1>
+        <div class="subtitle">才能を持ち寄って育てる、大きなプロジェクトたち</div>
+        <div class="link"><a href="index.html">← トップページへ戻る（ある場合）</a></div>
+    </header>
+
+    <main>
+        <div class="sheet-info">
+            ・テーブル中央に数枚表向きで置き、ゲーム中に少しずつ進める「共通の大仕事」として使います。<br />
+            ・各ターン、プレイヤーは自分の才能カードを1枚まで、いずれかのプロジェクトに捧げることができます（任意ルール）。
+        </div>
+
+        <div class="cards-grid">
+
+            <!-- プロジェクト1 -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span class="card-icon">🏮</span>
+                        <span>地域まるごと文化祭</span>
+                    </div>
+                    <div class="card-desc">
+                        村じゅうが参加する文化祭。技や表現やもてなしが重なり、にぎやかな日が生まれる。
+                    </div>
+
+                    <div class="section-label">相性の良い才能</div>
+                    <div>
+                        <span class="pill">👐 手しごとの才能</span>
+                        <span class="pill">🎨 表現の才能</span>
+                        <span class="pill">💡 企画の才能</span>
+                        <span class="pill">🕸 つなぐ才能</span>
+                        <span class="pill">🧑‍🍳 もてなしの才能</span>
+                    </div>
+
+                    <div class="section-label">完成条件</div>
+                    <ul>
+                        <li>違う才能カードが <strong>4種類以上</strong> このカードの上に置かれている。</li>
+                    </ul>
+
+                    <div class="section-label">完成したときの効果</div>
+                    <div class="effect">
+                        🎎 文化 K +3 / 🤝 コミュニティ S +3 / 💫 空環 P +2
+                    </div>
+                </div>
+                <div class="note">「文化祭の日」のイベントが起きているなら、さらに K +1 / S +1。</div>
+            </div>
+
+            <!-- プロジェクト2 -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span class="card-icon">🛠</span>
+                        <span>多世代シェア工房</span>
+                    </div>
+                    <div class="card-desc">
+                        子どもからお年寄りまでが集い、手しごとや修理を分かち合う工房。
+                    </div>
+
+                    <div class="section-label">相性の良い才能</div>
+                    <div>
+                        <span class="pill">👐 手しごとの才能</span>
+                        <span class="pill">📚 教える才能</span>
+                        <span class="pill">🔧 直す才能</span>
+                        <span class="pill">🧮 仕組み化の才能</span>
+                        <span class="pill">🏡 場づくりの才能</span>
+                    </div>
+
+                    <div class="section-label">完成条件</div>
+                    <ul>
+                        <li>3ターン以上にわたって、合計 <strong>5枚</strong> の才能カードが置かれる。</li>
+                    </ul>
+
+                    <div class="section-label">完成したときの効果</div>
+                    <div class="effect">
+                        🌳 森 F +1 / 🎎 文化 K +2 / 🤝 コミュニティ S +2
+                    </div>
+                    <div class="effect">
+                        以後、「修理・再生」系アクションの効果に <strong>+1</strong> のボーナス。
+                    </div>
+                </div>
+                <div class="note">工房は、物を捨てずに活かす拠点として働き続ける。</div>
+            </div>
+
+            <!-- プロジェクト3 -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span class="card-icon">🌲</span>
+                        <span>森と暮らしの学校</span>
+                    </div>
+                    <div class="card-desc">
+                        森と畑と暮らしを学ぶ小さな学校。未来の担い手たちが育っていく。
+                    </div>
+
+                    <div class="section-label">相性の良い才能</div>
+                    <div>
+                        <span class="pill">🌱 育てる才能</span>
+                        <span class="pill">📚 教える才能</span>
+                        <span class="pill">🧠 学びの才能</span>
+                        <span class="pill">📣 伝える才能</span>
+                    </div>
+
+                    <div class="section-label">完成条件</div>
+                    <ul>
+                        <li>違う才能カードが <strong>4種類以上</strong> 置かれている。</li>
+                        <li>ゲーム中に「子ども」関連のイベントが1回以上起きている。</li>
+                    </ul>
+
+                    <div class="section-label">完成したときの効果</div>
+                    <div class="effect">
+                        🌳 森 F +2 / 🎎 文化 K +2 / 🤝 コミュニティ S +1
+                    </div>
+                    <div class="effect">
+                        以後、植林系アクションを行うたびに F に <strong>+1</strong> 追加。
+                    </div>
+                </div>
+                <div class="note">森と暮らしを学んだ子どもたちが、次の世代の守り手になる。</div>
+            </div>
+
+            <!-- プロジェクト4 -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span class="card-icon">🌀</span>
+                        <span>空環マーケット（循環市）</span>
+                    </div>
+                    <div class="card-desc">
+                        お金だけでなく、物々交換や空環ポイントも混ざり合う市。豊かさが巡り始める。
+                    </div>
+
+                    <div class="section-label">相性の良い才能</div>
+                    <div>
+                        <span class="pill">📦 物流の才能</span>
+                        <span class="pill">🧮 仕組み化の才能</span>
+                        <span class="pill">📣 伝える才能</span>
+                        <span class="pill">🧑‍🍳 もてなしの才能</span>
+                        <span class="pill">🕸 つなぐ才能</span>
+                    </div>
+
+                    <div class="section-label">完成条件</div>
+                    <ul>
+                        <li>違う才能カードが <strong>4種類以上</strong> 置かれている。</li>
+                        <li>そのうち1枚は「仕組み化」か「物流」の才能であること。</li>
+                    </ul>
+
+                    <div class="section-label">完成したときの効果</div>
+                    <div class="effect">
+                        🤝 コミュニティ S +2 / 💫 空環 P +3
+                    </div>
+                    <div class="effect">
+                        以後、空環ポイントの減衰（デミュレージ）を毎ターン <strong>−1</strong> 軽減できる。
+                    </div>
+                </div>
+                <div class="note">物と想いが巡り、使われず眠るものが減っていく。</div>
+            </div>
+
+            <!-- プロジェクト5 -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span class="card-icon">✨</span>
+                        <span>夜の語り部の会</span>
+                    </div>
+                    <div class="card-desc">
+                        仕事終わりに集まり、昔話や失敗談、未来の夢を語り合う会。
+                    </div>
+
+                    <div class="section-label">相性の良い才能</div>
+                    <div>
+                        <span class="pill">👂 聴く才能</span>
+                        <span class="pill">📚 教える才能</span>
+                        <span class="pill">📣 伝える才能</span>
+                        <span class="pill">🏡 場づくりの才能</span>
+                        <span class="pill">🌈 調停の才能</span>
+                    </div>
+
+                    <div class="section-label">完成条件</div>
+                    <ul>
+                        <li>違う才能カードが <strong>3種類以上</strong> 置かれている。</li>
+                        <li>少なくとも「聴く」か「場づくり」の才能が含まれている。</li>
+                    </ul>
+
+                    <div class="section-label">完成したときの効果</div>
+                    <div class="effect">
+                        🤝 コミュニティ S +3 / 🎎 文化 K +1
+                    </div>
+                    <div class="effect">
+                        以後、対立や不和イベントが起きたとき、その効果を <strong>−1</strong> 軽減できる。
+                    </div>
+                </div>
+                <div class="note">物語を分かち合うたび、見えない信頼の糸が少しずつ強くなる。</div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
