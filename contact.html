@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>お問い合わせ - 神環記 : Record of the Gods</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f3ea;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 2.2rem 1.2rem 1.2rem;
+            text-align: center;
+            background: radial-gradient(circle at top, #fffef6, #e9e2c7);
+            border-bottom: 1px solid #d2c9a5;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.9rem;
+            letter-spacing: 0.12em;
+        }
+
+        .subtitle {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        nav {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #7b5a25;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid #d2c9a5;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1.4rem 1rem 2.5rem;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 1.5rem 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e0d6b6;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin: 0 0 1rem;
+            border-left: 4px solid #9b7a39;
+            padding-left: 0.5rem;
+        }
+
+        p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.6rem 0.8rem;
+            border: 1px solid #d2c9a5;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            background: #fffcf4;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            appearance: none;
+            border: none;
+            border-radius: 999px;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            background: #9b7a39;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:hover {
+            background: #8a6a2a;
+        }
+
+        .note {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #777;
+            padding: 0.8rem 0.5rem 1.4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>神環記 : Record of the Gods</h1>
+        <div class="subtitle">お問い合わせ</div>
+        <nav>
+            <a href="index.html">トップページ</a>
+            <a href="rules.html">ルールブック</a>
+            <a href="app.html">簡易アプリ</a>
+            <a href="talents.html">才能カード</a>
+            <a href="projects.html">共創プロジェクト</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>ご意見・お問い合わせ</h2>
+            <p>
+                このプロジェクトは鋭意ブラッシュアップ中です。ご意見、ご質問、バグ報告など、お気軽にお問い合わせください。
+            </p>
+            <p class="note">
+                ※ 現在、お問い合わせフォームは準備中です。以下のメールアドレスまで直接ご連絡ください。
+            </p>
+        </section>
+
+        <section>
+            <h2>連絡先</h2>
+            <p>
+                <strong>メールアドレス：</strong><br>
+                <a id="email-link" href="#" style="color: #7b5a25;" onclick="return false;">読み込み中...</a>
+            </p>
+            <p class="note">
+                ※ メールアドレスをクリックすると、メールソフトが開きます。
+            </p>
+        </section>
+
+        <section>
+            <h2>よくある質問</h2>
+            <p><strong>Q: ゲームのルールについて質問があります。</strong></p>
+            <p>A: <a href="rules.html">ルールブック</a>をご確認ください。不明な点があればお問い合わせください。</p>
+
+            <p><strong>Q: バグを発見しました。</strong></p>
+            <p>A: お問い合わせの際に、使用環境（ブラウザ、デバイス）と再現手順をお知らせください。</p>
+
+            <p><strong>Q: 機能追加の要望があります。</strong></p>
+            <p>A: ご意見をお聞かせください。今後の改善に反映させていただきます。</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="kuukanproj.html">空環</a>：Akasha – 人もまた、八百万の神々の一柱である。
+    </footer>
+
+    <script>
+        // メールアドレスをスパムボット対策のため動的に生成（複数の難読化手法を組み合わせ）
+        (function() {
+            'use strict';
+            
+            // 文字列を逆順にする関数
+            var reverse = function(str) {
+                return str.split('').reverse().join('');
+            };
+            
+            // 文字コードをシフトして復号化
+            var decodeShift = function(str, shift) {
+                return str.split('').map(function(c) {
+                    return String.fromCharCode(c.charCodeAt(0) - shift);
+                }).join('');
+            };
+            
+            // 文字列を分割して結合（難読化）
+            var combine = function(arr) {
+                return arr.join('');
+            };
+            
+            // 複数の難読化手法を組み合わせて復元
+            // パート1: 'siba1015' を複数の方法で難読化
+            var p1_encoded = ['5', '1', '0', '1', 'a', 'b', 'i', 's']; // 逆順
+            var p1_reversed = reverse(combine(p1_encoded));
+            var p1_shifted = decodeShift('tjcb2126', 1); // 文字コードシフト
+            var part1 = p1_reversed || p1_shifted;
+            
+            // パート2: 'icloud' を複数の方法で難読化
+            var p2_encoded = ['d', 'u', 'o', 'l', 'c', 'i']; // 逆順
+            var p2_reversed = reverse(combine(p2_encoded));
+            var p2_shifted = decodeShift('jdpme', 1); // 文字コードシフト
+            var part2 = p2_reversed || p2_shifted;
+            
+            // パート3: 'com' を複数の方法で難読化
+            var p3_encoded = ['m', 'o', 'c']; // 逆順
+            var p3_reversed = reverse(combine(p3_encoded));
+            var p3_shifted = decodeShift('dpn', 1); // 文字コードシフト
+            var part3 = p3_reversed || p3_shifted;
+            
+            // メールアドレスを組み立て（@と.も文字コードから生成）
+            var atSymbol = String.fromCharCode(64); // '@'
+            var dotSymbol = String.fromCharCode(46); // '.'
+            var email = part1 + atSymbol + part2 + dotSymbol + part3;
+            
+            // DOM操作を少し遅延させてから実行（簡単なボット対策）
+            var delay = 100 + Math.floor(Math.random() * 200); // 100-300msのランダム遅延
+            setTimeout(function() {
+                var emailLink = document.getElementById('email-link');
+                if (emailLink && email) {
+                    emailLink.href = 'mailto:' + email;
+                    emailLink.textContent = email;
+                    emailLink.onclick = null;
+                    emailLink.style.cursor = 'pointer';
+                    emailLink.title = 'クリックしてメールを送信';
+                }
+            }, delay);
+        })();
+    </script>
+</body>
+
+</html>
+

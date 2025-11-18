@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>空環：Akasha – 八百万の神々と地球を守るボードゲーム</title>
+    <title>神環記 : Record of the Gods – 八百万の神々と地球を守るボードゲーム</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <style>
         body {
@@ -32,6 +32,10 @@
             margin-top: 0.6rem;
             font-size: 0.9rem;
             color: #555;
+        }
+
+        .hidden {
+            display: none;
         }
 
         nav {
@@ -191,14 +195,36 @@
             color: #777;
             padding: 0.8rem 0.5rem 1.4rem;
         }
+
+        .notice-banner {
+            margin-top: 1rem;
+            padding: 0.8rem 1rem;
+            background: linear-gradient(135deg, #fff3bf 0%, #ffe5e0 100%);
+            border: 2px solid #9b7a39;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #7b241c;
+            box-shadow: 0 2px 8px rgba(155, 122, 57, 0.2);
+        }
+
+        .notice-banner a {
+            color: #7b241c;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .notice-banner a:hover {
+            color: #5a1a14;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>空環：Akasha</h1>
+        <h1>神環記 : Record of the Gods</h1>
         <div class="subtitle">地球を守る八百万の神々のためのシミュレーションボードゲーム</div>
-        <div class="subtitle">プレイヤー自身もまた、八百万の神の一柱であることを思い出す物語。</div>
+        <div class="subtitle hidden">プレイヤー自身もまた、八百万の神の一柱であることを思い出す物語。</div>
         <nav>
             <a href="#about">ゲーム概要</a>
             <a href="#story">世界観</a>
@@ -206,6 +232,9 @@
             <a href="#components">コンポーネント</a>
             <a href="#links">リンク</a>
         </nav>
+        <div class="notice-banner">
+            ⚠️ このプロジェクトは鋭意ブラッシュアップ中です。ご意見がある方は<a href="contact.html">こちらへ</a>
+        </div>
         <div class="hero-buttons">
             <a href="app.html" class="btn btn-main">📱 簡易アプリを開く</a>
             <a href="rules.html" class="btn btn-sub">📜 詳しいルールを見る</a>
@@ -218,13 +247,13 @@
             <div class="two-col">
                 <div>
                     <p>
-                        『空環：Akasha』は、<br>
-                        <strong>森・文化・コミュニティ・空環マネー</strong> をつかって、
+                        『<a href="kuukanproj.html">空環</a>：Akasha』は、<br>
+                        <strong>森・文化・コミュニティ・<a href="kuukanproj.html">空環マネー</a></strong> をつかって、
                         20年間で世界を立て直す協力型ボードゲームです。
                     </p>
                     <p>
                         プレイヤーたちはそれぞれ
-                        <strong>「森の守り手」「文化の継承者」「コミュニティの灯火」「空環エンジニア」</strong>
+                        <strong>「森の守り手」「文化の継承者」「コミュニティの灯火」「<a href="kuukanproj.html">空環</a>エンジニア」</strong>
                         といった神格を持つ存在として行動します。
                     </p>
                     <p>
@@ -237,7 +266,8 @@
                     </ul>
                     <p>
                         を育てながら、
-                        <span class="pill pill-akasha">空環ポイント（P）</span>
+                        <span class="pill pill-akasha"><a href="kuukanproj.html"
+                                style="color:inherit;text-decoration:none">空環ポイント（P）</a></span>
                         を使って「循環する経済」を作っていきます。
                     </p>
                 </div>
@@ -275,7 +305,7 @@
                 ただ、その「神性」を忘れているだけなのだ。
             </p>
             <p>
-                空環（あかし）は、<strong>使うほど循環し、貯めこむと減衰する</strong>新しい通貨。<br>
+                <a href="kuukanproj.html">空環</a>（くうかん）は、<strong>使うほど循環し、貯めこむと減衰する</strong>新しい通貨。（単位は、１Akasha）<br>
                 旧来の「利子のための貨幣」ではなく、
                 <strong>生命と調和を育てるためのマネー</strong>として設計されています。
             </p>
@@ -296,7 +326,7 @@
                 <li>イベントカードを1枚めくる（災害・祭り・神々の加護・旧経済の誘惑など）</li>
                 <li>プレイヤー全員で「今年どう動くか」を相談する</li>
                 <li>アクションカードを最大3枚選び、それぞれの効果をボードに反映する</li>
-                <li>空環ポイント（P）の減衰（デミュレージ）を処理する</li>
+                <li><a href="kuukanproj.html">空環</a>ポイント（P）の減衰（デミュレージ）を処理する</li>
                 <li>F, K, S を合計して生命指数 L を更新する</li>
                 <li>F=0 / K=0 / S=0 があれば即ゲームオーバー</li>
             </ol>
@@ -311,15 +341,28 @@
             <h2>コンポーネント（必要なもの）</h2>
             <ul>
                 <li>A4ボード（F / K / S / P / L のトラックを描いたもの）</li>
-                <li>プレイヤーごとの神格カード（森・文化・コミュ・空環）</li>
+                <li>プレイヤーごとの神格カード（森・文化・コミュ・<a href="kuukanproj.html">空環</a>）</li>
                 <li>イベントカード（25枚）</li>
                 <li>アクションカード（20枚）</li>
+                <li><a href="talents.html">🧩 才能カード</a>（20枚） - プレイヤーの得意なことを表すカード。アクションに重ねてボーナス効果を発揮</li>
+                <li><a href="projects.html">🏗 共創プロジェクトカード</a> - プレイヤー全員で少しずつ進める大きな共同プロジェクト</li>
                 <li>コマやビーズ（トラック用）</li>
                 <li>そして、<strong>iPhoneでも使える簡易アプリ盤面</strong></li>
             </ul>
             <p>
                 物理ボードとカードを手作りしつつ、点数管理だけ
                 <a href="app.html">📱 簡易アプリ</a> を使うのが遊びやすい想定です。
+            </p>
+            <h3>才能カードについて</h3>
+            <p>
+                各プレイヤーはゲーム開始時に2〜3枚の才能カードを持ちます。アクションカードに相性の良い才能を重ねると、効果に+1ボーナスが乗ります。異なる才能を2枚まで重ねて、合計+2までボーナス可能です。
+            </p>
+            <h3>共創プロジェクトについて</h3>
+            <p>
+                ゲーム開始時に2〜3枚の共創プロジェクトカードを場に置きます。各ターン、プレイヤーは自分の才能カードを1枚までプロジェクトに捧げることができ、完成条件を満たすと大きな効果が発動します。
+            </p>
+            <p>
+                詳しいルールは<a href="rules.html">📜 ルールブック</a>を参照してください。
             </p>
         </section>
 
@@ -328,6 +371,8 @@
             <ul>
                 <li><a href="app.html">📱 簡易盤面アプリ（F / K / S / P / L 管理用）</a></li>
                 <li><a href="rules.html">📜 詳しいルール・世界観・カード一覧</a></li>
+                <li><a href="talents.html">🧩 才能カード（印刷用）</a></li>
+                <li><a href="projects.html">🏗 共創プロジェクトカード（印刷用）</a></li>
             </ul>
             <p class="note">
                 ※ iPhoneでは、Safariで開いて「共有」→「ホーム画面に追加」を選ぶと、<br>
@@ -337,7 +382,7 @@
     </main>
 
     <footer>
-        空環：Akasha – 人もまた、八百万の神々の一柱である。
+        <a href="kuukanproj.html">空環</a> の仮想ゲーム 　神環記 ： Record of the Gods - 人もまた、八百万の神々の一柱である。
     </footer>
 </body>
 
