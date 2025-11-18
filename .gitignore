@@ -1,0 +1,88 @@
+# 機密情報・認証情報
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa
+id_rsa.pub
+id_dsa
+id_dsa.pub
+*.secret
+secrets/
+credentials/
+config.local.*
+*.credentials
+
+# 環境変数ファイル
+.envrc
+.env.development
+.env.production
+.env.test
+
+# ログファイル（機密情報が含まれる可能性）
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# バックアップファイル
+*.bak
+*.backup
+*.old
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# 一時ファイル
+*.swp
+*.swo
+*.swn
+.cache/
+tmp/
+temp/
+
+# エディタ設定（個人設定）
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS固有ファイル
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ビルド成果物（必要に応じて）
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# テストカバレッジ
+coverage/
+.nyc_output/
+
+# ローカル設定ファイル
+local.json
+local.config.*
+settings.local.*
+
