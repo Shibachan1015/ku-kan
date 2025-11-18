@@ -1,0 +1,13 @@
+{
+  "name": "ku-kan",
+  "version": "1.0.0",
+  "description": "空環：Akasha プロジェクト",
+  "scripts": {
+    "dev": "live-server --port=3000 --watch=.",
+    "start": "live-server --port=3000 --watch=."
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
+
