@@ -7,6 +7,8 @@ on:
     branches: [ main, develop ]
   workflow_dispatch:
 
+# CIテスト用: このワークフローは機密情報の漏洩をチェックします
+
 jobs:
   security-scan:
     runs-on: ubuntu-latest
